@@ -2,26 +2,24 @@
 import PropTypes from 'prop-types';
 
 import ColorFrame from './ColorFrame';
-import BR2 from './BR2';
+import DoubleBt from './DoubleBt';
+import withRainbowFrame from './withRainbowFrame';
 
 class VotesBlock extends React.Component {
 
-  static propTypes = {
-    
-  };
 
   state = {
     colors:['red','orange','yellow','green','#00BFFF','blue','purple']
   };
+  
 
   render() {
     let text="первый<br>второй<br/>третий<br />последний";
+    let FramedDoubleButton=withRainbowFrame(this.state.colors)(DoubleBt);
 
     return (
       <div className='VotesBlock'>
-        <ColorFrame colors= {this.state.colors}>
-          <BR2 text={text} />
-        </ColorFrame>
+          <FramedDoubleButton caption1="однажды" caption2="пору" cbPressed={ num => alert(num) }>в студёную зимнюю</FramedDoubleButton>
       </div>
     );
 

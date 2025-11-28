@@ -4,9 +4,10 @@ import PropTypes from 'prop-types';
 class ColorFrame extends React.Component {
 
   static propTypes = {
-    colors: PropTypes.arrayOf(PropTypes.string).isRequired,
+    colors: PropTypes.arrayOf.isRequired,
   };
     
+
   render() {
 
     const colors = this.props.colors;
