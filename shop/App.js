@@ -1,16 +1,10 @@
-﻿import React from 'react';
-import ReactDOM from 'react-dom';
+﻿import React from "react";
+import Maxinm from "./components/components/Maxinm";
 
+const words = ['california', 'everything', 'aboveboard', 'washington', 'basketball', 'weathering', 'characters', 'literature', 'contraband', 'appreciate'];
 
-const shopName='';
+function App() {
+  return <Maxinm words={words} />;
+}
 
-import answersArr from './answers.json';
-import Main from './components/VotesBlock';
-
-ReactDOM.render(
-  <Main 
-    sname={shopName}
-    shoplist={answersArr}
-  />
-  , document.getElementById('container') 
-);
+export default App;

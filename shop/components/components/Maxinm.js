@@ -1,18 +1,11 @@
-import React,{useState,useMemo, useCallback} from "react";
+import React,{useState,useMemo} from "react";
 
-import Inputsy from "./Inputsy";
-import Words from "./Words";
+import Inputsyn from "./Inputsyn";
+import Wordsn from "./Wordsn";
 
-export default function Maxin ({words}){
+export default function Maxinm ({words}){
     const [val,setVal] = useState("");
     const [sort,setSort] = useState(false);
-
-    const setValCa = useCallback(va => setVal(va), []);
-    const setSortCa = useCallback(so => setSort(so),[]);
-    const resetBtCa = useCallback(() => {
-        setVal("");
-        setSort(false);
-    },[])
 
     const filtFunck = useMemo(() => {
         let res = [...words]
@@ -29,18 +22,22 @@ export default function Maxin ({words}){
         return res;
     },[val,sort,words])
 
-    console.log("render vse")
+    const resetBt = () =>{
+        setVal("");
+        setSort(false);
+    }
+    
     return(
         <div>
-            <Inputsy
+            <Inputsyn
                 val = {val}
-                valChange = {setValCa}
+                valChange = {setVal}
                 sort = {sort}
-                sortChange = {setSortCa}
-                reset = {resetBtCa}
+                sortChange = {setSort}
+                reset = {resetBt}
             />
 
-            <Words
+            <Wordsn
                 words = {filtFunck}
             />
         </div>

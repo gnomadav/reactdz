@@ -1,13 +1,13 @@
 import React from "react";
 
-function Inputsy ({
+export default function Inputsyn ({
     val,
     valChange,
     sort,
     sortChange,
     reset
 }){
-    console.log("render inp")
+    console.log("render 2")
     return(
         <div>
             <input
@@ -24,10 +24,8 @@ function Inputsy ({
 
             <button
             onClick={reset}>
-                Сброс..
+                Сброс...
             </button>
         </div>
     )
 }
-
-export default React.memo(Inputsy);

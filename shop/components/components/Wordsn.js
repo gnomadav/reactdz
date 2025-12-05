@@ -1,7 +1,6 @@
 import React from "react";
 
-function Words ({words}){
-    console.log("render list");
+export default function Wordsn ({words}){
     return (
         <div>
             {words.map((word) => 
@@ -11,4 +10,3 @@ function Words ({words}){
     )
 }
 
-export default React.memo(Words);
