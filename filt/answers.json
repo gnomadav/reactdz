@@ -1,0 +1,6 @@
+[ 
+    {"name":"майка", "code":1, "price":200, "url":"https://static.markformelle.by/site/master/catalog/700043/desktop/card/9049517.webp"}, 
+    {"name":"штаны", "code":2, "price":100, "url":"https://static.markformelle.by/site/master/catalog/698803/desktop/card/8977716.webp"}, 
+    {"name":"худи", "code":3, "price":300, "url":"https://static.markformelle.by/site/master/catalog/700101/desktop/card/9049560.webp"},
+    {"name":"пижама", "code":4, "price":50, "url":"https://static.markformelle.by/site/master/catalog/699649/desktop/card/9031253.webp"}
+]
