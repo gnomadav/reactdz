@@ -1,14 +1,16 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { loadCompanyThunk } from "../redux/red1";
 import MobComp from "./MobComp";
+import { loadCompanyThunk } from "../redux/red1";
 
 function ClientsList() {
     const dispatch = useDispatch();
     const companyName = useSelector(state => state.clients.companyName);
     const clients = useSelector(state => state.clients.clients);
 
-    
+    useEffect(() => {
+        loadCompanyThunk(dispatch);
+    }, [])
 
     return (
         <div>
